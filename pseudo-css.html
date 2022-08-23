@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo CSS</title>
+    <style>
+        .btn{
+            border: 1px solid black;
+            border-radius: 5px;
+            background-color: red;
+        }
+        div.kotak{
+            height: 600px;
+            width: 600px;
+            background-color: yellow;
+        }
+        /* pseudo class */
+        .btn:hover{
+            background-color: blue;
+        }
+        .btn:active{
+            background-color: yellow;
+        }
+        /* pseudo element */
+        .text::after{
+            content:" after";
+            color: blue;
+        }
+        .text::before{
+            content:"before ";
+            color: red;
+        }
+        div.kotak::after{
+            content: "";
+            display: block;
+            width: 100px;
+            height: 250px;
+            background-color: blue;
+        }
+        div.kotak::before{
+            content: "";
+            display: block;
+            width: 250px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="text">text</h1>
+    <div class="kotak"></div>
+    <buttton class="btn">
+        click me
+    </buttton>
+</body>
+</html>
